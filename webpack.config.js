@@ -9,7 +9,13 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		publicPath: '/dist/',
     filename: 'js/app.js'
-  },
+	},
+	resolve: {
+		alias: {
+			page: path.resolve(__dirname, 'src/page'),
+			components: path.resolve(__dirname, 'src/components')
+		}
+	},
   module: {
 	  rules: [
 	    {
@@ -67,7 +73,8 @@ module.exports = {
   plugins: [
 		// 处理html
   	new HtmlWebpackPlugin({
-  		template: './src/index.html'
+			template: './src/index.html',
+			favicon: './favicon.ico'
 		}),
 		// 处理css
 		new ExtractTextPlugin("css/[name].css"),
@@ -78,6 +85,9 @@ module.exports = {
 		})
 	],
 	devServer: {
-		port: 8086
+		port: 8086,
+		historyApiFallback: {
+			index: '/dist/index.html'
+		}
   },
 };
