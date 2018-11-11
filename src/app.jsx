@@ -6,7 +6,7 @@ import Login from 'page/login/login.jsx'
 import Layout from 'components/layout/index.jsx'
 import ErrorPage from 'page/error/error.jsx'
 import UserList from 'page/user/user.jsx'
-
+import ProductRouter from 'page/product/router.jsx'
 // <Route path="/product-category" component={Home} />
 
 class App extends React.Component {
@@ -16,7 +16,7 @@ class App extends React.Component {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/product" component={Login} />
+          <Route path="/product" component={ProductRouter} />
           <Route path="/user/index" component={UserList} />
           <Redirect exact from="/user" to="/user/index" />
           <Route component={ErrorPage} />

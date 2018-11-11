@@ -37,7 +37,10 @@ class MUtil {
   }
   // 错误提示
   errorTips(err) {
-    alert(err || '好像哪里不对了~')
+    alert(err || '好像哪里不对了~');
+  }
+  successTips(msg) {
+    alert(msg || '操作成功~');
   }
   // 本地存储
   setStorage(key, val) {
