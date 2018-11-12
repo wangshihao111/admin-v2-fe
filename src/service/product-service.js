@@ -41,6 +41,22 @@ class Product {
     })
   }
 
+  updateCategoryName(data) {
+    return _mm.request({
+      type: 'post',
+      url: '/manage/category/set_category_name.do',
+      data: data
+    });
+  }
+
+  // 保存品类
+  saveCategory(obj) {
+    return _mm.request({
+      type: 'post',
+      url: '/manage/category/add_category.do',
+      data: obj
+    })
+  }
   validateProduct(product) {
     let result = {
       status: true,
