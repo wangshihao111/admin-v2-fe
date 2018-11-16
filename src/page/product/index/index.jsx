@@ -70,7 +70,6 @@ class ProductList extends React.Component {
     }, () => {
       this.loadProductList();
     })
-    console.log(type, value)
   }
   render() {
     let tableHeader = [
