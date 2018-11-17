@@ -1,0 +1,17 @@
+body {
+	background: #ccc;
+	#app {
+		.jsx {
+			color: blue;
+			font-size: 60px;
+		}
+	}
+}
+.clearfix {
+	display: block;
+	content: '';
+	height: 0;
+	line-height: 0;
+	clear: both;
+	zoom: 1;
+}
